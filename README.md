@@ -1,8 +1,3 @@
-Thank you for providing additional code and API details. Based on this, I’ll refine the **API Documentation** section in the `README.md` to match your endpoints and structure.
-
-Here’s the final README, including updated API details:
-
----
 
 ```markdown
 # Rule Engine with AST
@@ -20,15 +15,7 @@ Here’s the final README, including updated API details:
 - Evaluation of user eligibility based on JSON input against defined rules.
 - Support for modifying existing rules within the AST.
 
-## Project Structure
 
-```plaintext
-rule-engine-with-ast/
-├── client/               # React frontend code
-├── server/               # Node/Express backend code
-├── .env                  # Environment variables for MongoDB connection and other secrets
-├── README.md             # Project documentation
-└── package.json          # Project metadata and dependencies
 ```
 
 ## Installation
@@ -55,29 +42,39 @@ Ensure you have the following installed:
 
    ```plaintext
    MONGO_URI=<Your MongoDB connection string>
-   JWT_SECRET=<Your JWT Secret> (if applicable)
+   Added string for less configuration. Will disavle it after evaluation.
    PORT=5000 (optional, if different)
    ```
 
-3. **Install Server Dependencies**:
+3. **Install All Dependencies at Once**:
 
-   From the root directory, install the backend dependencies:
+   You can install all dependencies for both `client` and `server` by running the following command from the root directory:
+
+   ```bash
+   npm install --prefix server && npm install --prefix client
+   ```
+
+   Alternatively, you can install dependencies individually as shown below.
+
+4. **Install Server Dependencies Individually**:
+
+   Navigate to the `server` directory and install backend dependencies:
 
    ```bash
    cd server
-   npm install
+   npm install express mongoose body-parser cors dotenv nodemon
    ```
 
-4. **Install Client Dependencies**:
+5. **Install Client Dependencies Individually**:
 
-   Move to the client directory and install frontend dependencies:
+   Move to the `client` directory and install frontend dependencies:
 
    ```bash
    cd ../client
-   npm install
+   npm install axios
    ```
 
-5. **Run the Project**:
+6. **Run the Project**:
 
    - Start the server (from the `server` directory):
 
@@ -214,4 +211,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ```
 
-This README now includes all relevant APIs and details based on your code. Let me know if any additional sections are needed or if there are other adjustments you'd like to make!
+This updated README includes all commands for installing dependencies. Let me know if you need further modifications!
