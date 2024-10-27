@@ -79,7 +79,8 @@ Ensure you have the following installed:
    - Start the server (from the `server` directory):
 
      ```bash
-     npm start
+     npm run dev
+
      ```
 
    - Start the client (from the `client` directory):
